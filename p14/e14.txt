@@ -1,0 +1,20 @@
+Clasificación según la Taxonomía de Flynn
+
+OpenMP (Open multi processing):
+
+    Clasificación: MIMD (Multiple Instruction, Multiple Data) con posibilidad de SIMD bajo ciertas directivas.
+    Justificación:
+        MIMD (Multiple Instruction, Multiple Data): OpenMP permite la ejecución de múltiples hilos de ejecución, cada uno ejecutando su propio flujo de instrucciones sobre diferentes datos. Esto se logra con directivas como #pragma omp parallel, que crean un equipo de hilos que ejecutan secciones de código de forma concurrente.
+        SIMD (Single Instruction, Multiple Data): Bajo ciertas directivas como #pragma omp simd, OpenMP puede aprovechar las instrucciones SIMD de los procesadores modernos para ejecutar una misma operación en paralelo sobre múltiples datos, mejorando así el rendimiento en operaciones vectorizables.
+
+MPI (Message Passing Interface):
+
+    Clasificación: MIMD (Multiple Instruction, Multiple Data).
+    Justificación:
+        MIMD (Multiple Instruction, Multiple Data): MPI permite la ejecución simultánea de múltiples procesos, cada uno ejecutando su propio conjunto de instrucciones sobre sus propios datos. Cada proceso en MPI tiene su propio espacio de memoria y puede comunicarse con otros procesos mediante mensajes. Esto facilita la programación de sistemas distribuidos y paralelos.
+
+Multiprocessing (Python):
+
+    Clasificación: MIMD (Multiple Instruction, Multiple Data).
+    Justificación:
+    MIMD (Multiple Instruction, Multiple Data): En Python, el módulo multiprocessing permite la ejecución de múltiples procesos en paralelo, cada uno con su propio flujo de instrucciones y datos. Esto se logra mediante la creación de procesos independientes que pueden comunicarse entre sí utilizando tuberías y otras estructuras de datos compartidas.
